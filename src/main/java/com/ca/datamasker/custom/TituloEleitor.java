@@ -1,4 +1,4 @@
-package com.ca.fastdatamasker.custom;
+package com.ca.datamasker.custom;
 
 /**
  * This class represents a Brazilian Vote Register (aka Titulo de Eleitor)

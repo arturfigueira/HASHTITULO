@@ -1,11 +1,9 @@
-package com.ca.fastdatamasker.custom;
+package com.ca.datamasker.custom;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Also called in Brazil, Unidade Federativa, aka UF. It's the unique code

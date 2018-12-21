@@ -1,4 +1,4 @@
-package com.ca.fastdatamasker.custom;
+package com.ca.datamasker.custom;
 
 public class TituloDeEleitorValidator {
 

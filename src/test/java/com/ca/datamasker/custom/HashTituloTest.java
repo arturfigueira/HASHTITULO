@@ -1,4 +1,4 @@
-package com.ca.fastdatamasker.custom;
+package com.ca.datamasker.custom;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,7 @@
-package com.ca.fastdatamasker.custom;
+package com.ca.datamasker.custom;
 
 import com.grid_tools.products.datamasker.IMaskFunction;
 import com.grid_tools.products.datamasker.randfunctions;
-
-import java.util.Random;
 
 public class HashTitulo implements IMaskFunction {
     @Override
