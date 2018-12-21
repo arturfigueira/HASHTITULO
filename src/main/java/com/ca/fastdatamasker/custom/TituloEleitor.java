@@ -34,6 +34,17 @@ public class TituloEleitor {
         this.uf = uf;
     }
 
+    /**
+     * Convert plain text number into a TituloEleitor
+     * @param titulo number with state code and checkdigit
+     */
+    public TituloEleitor(final String titulo){
+        this.number = titulo.substring(0, titulo.length()-4);
+        final String ufCode = titulo.substring(titulo.length()-4,titulo.length()-2);
+        this.checkDigit = titulo.substring(titulo.length()-2);
+        this.uf = FederalUnity.getFromCode(ufCode);
+    }
+
     public String getNumber() {
         return number;
     }
@@ -68,6 +79,6 @@ public class TituloEleitor {
 
     @Override
     public String toString() {
-        return String.format("%s%d%s", number,uf.getCode(),checkDigit);
+        return number+uf.getCode()+checkDigit;
     }
 }
