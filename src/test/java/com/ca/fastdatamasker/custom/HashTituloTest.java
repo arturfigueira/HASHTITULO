@@ -20,11 +20,6 @@ public class HashTituloTest {
     }
 
     @Test
-    public void testMasWithAleatoryStateIsValid() {
-        assertTrue("Masked Valid Titulo should also be valid", TituloDeEleitorValidator.isValid(hasher.hashWithAleatoryState("881268051643")));
-    }
-
-    @Test
     public void testMaskWithFixedStateIsValid() {
         assertTrue("Masked Valid Titulo should also be valid", TituloDeEleitorValidator.isValid(hasher.hashWithFixedState("156106040230", "MG")));
     }
@@ -34,13 +29,6 @@ public class HashTituloTest {
     public void testMaskChangedTheValue() {
         final String origingalTitulo = "156106040230";
         final String hashedValue = hasher.hashWithFixedState(origingalTitulo, "RR");
-        assertNotEquals("Check if code didnt returned the original Titulo", hashedValue,origingalTitulo);
-    }
-
-    @Test
-    public void testMaskAleatoryStateChangedValue() {
-        final String origingalTitulo = "156106040230";
-        final String hashedValue = hasher.hashWithAleatoryState(origingalTitulo);
         assertNotEquals("Check if code didnt returned the original Titulo", hashedValue,origingalTitulo);
     }
 

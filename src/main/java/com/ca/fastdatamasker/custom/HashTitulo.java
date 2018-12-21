@@ -30,12 +30,6 @@ public class HashTitulo implements IMaskFunction {
         return hashTitulo(titulo, federalUnity);
     }
 
-    protected String hashWithAleatoryState(final String titulo){
-        final Random r = new Random();
-        final FederalUnity[] federalUnities = FederalUnity.values();
-        final FederalUnity federalUnity = federalUnities[r.nextInt(federalUnities.length)];
-        return hashTitulo(titulo, federalUnity);
-    }
 
     protected String hashMaintaningState(final String titulo){
         if(!TituloDeEleitorValidator.isValid(titulo)){
