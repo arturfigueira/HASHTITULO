@@ -69,8 +69,8 @@ Below you can find some examples, with the input Titulo and how the function wil
 
 | Titulo        |   UF   | Masked Titulo | Obs                                                      |
 | --------------|:------:|---------------| ---------------------------------------------------------|
-| 84608999256   | *Null* | 21512222079   | Masked value with check digi, without changing UF        |
-| 84608999256   |  *RJ*  | 21512222079   | Masked value with check digit, changing its original UF  |
+| 178208721481  | *Null* | 612012101473  | Masked value with check digit, without changing UF       |
+| 178208721481  |  *RJ*  | 612012100370  | Masked value with check digit, changing its original UF  |
 | *Null*        |        | *Null*        | Masking function will maintain Null values               |
 | `Empty`       |        | `Empty`       | Masking function will maintain Empty values              |
 
