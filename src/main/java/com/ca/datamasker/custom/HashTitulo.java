@@ -6,18 +6,17 @@ import com.grid_tools.products.datamasker.randfunctions;
 public class HashTitulo implements IMaskFunction {
     @Override
     public Object mask(Object... objects) {
-        String maskedValue = null;
-
         final String tituloToBeMasked = (String) objects[0];
-        if(tituloToBeMasked == null || tituloToBeMasked.trim().isEmpty()){
-            maskedValue = tituloToBeMasked;
-        }
 
-        final String maskingToUF = (String) objects[1];
-        if(maskingToUF == null || maskingToUF.isEmpty()){
-            maskedValue = hashMaintaningState(tituloToBeMasked);
-        }else{
-            maskedValue = hashWithFixedState(tituloToBeMasked, maskingToUF);
+        String maskedValue = tituloToBeMasked;
+        if(tituloToBeMasked != null && !tituloToBeMasked.isEmpty()){
+            final String maskingToUF = (String) objects[1];
+
+            if(maskingToUF == null || maskingToUF.isEmpty()){
+                maskedValue = hashMaintaningState(tituloToBeMasked);
+            }else{
+                maskedValue = hashWithFixedState(tituloToBeMasked, maskingToUF);
+            }
         }
 
         return maskedValue;
