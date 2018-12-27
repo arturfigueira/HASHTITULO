@@ -18,7 +18,6 @@ public class HashTitulo implements IMaskFunction {
                 maskedValue = hashWithFixedState(tituloToBeMasked, maskingToUF);
             }
         }
-
         return maskedValue;
     }
 
